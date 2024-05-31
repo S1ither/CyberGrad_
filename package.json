@@ -1,0 +1,34 @@
+{
+   "name": "cybergrad",
+   "type": "module",
+   "version": "0.0.1",
+   "main": "./dist/index.js",
+   "workspaces": [
+      "src/*"
+   ],
+   "scripts": {
+      "serve": "ts-node ./src/server/index.mts",
+      "dev": "node --loader ts-node/esm ./src/server/index.mts",
+      "start": "ts-node src/index.ts"
+   },
+   "author": {
+      "name": "S1ither",
+      "url": "https://github.com/S1ither"
+   },
+   "dependencies": {
+      "docker": "^1.0.0",
+      "docker-compose": "^0.24.8",
+      "http2": "^3.3.7",
+      "mikro-orm": "^6.2.8",
+      "sqlite3": "^5.1.7",
+      "typeorm": "0.3.20"
+   },
+   "devDependencies": {
+      "@mikro-orm/core": "^6.2.8",
+      "@mikro-orm/sqlite": "^6.2.8",
+      "@types/node": "^20.12.13",
+      "ts-node": "10.9.1",
+      "typescript": "^5.4.5"
+   },
+   "packageManager": "yarn@4.2.2"
+}

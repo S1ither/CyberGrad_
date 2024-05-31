@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap53/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/index.css"/>
+    <script async src="/js/data/index.js" defer></script>
+    <title>Киберград</title>
+  </head>
+  <body>
+    @file(template/header)
+    <main id="main" class="container h2">
+      <form action="localhost/test" method="get">
+        <label for="fio" class="form-text">ФИО</label>
+        <input type="text" name="fio" id="fio" class="form-control">
+        <button type="submit" class="btn btn-success">Найти</button>
+      </form>
+    </main>
+    @file(template/footer)
+  </body>
+</html>

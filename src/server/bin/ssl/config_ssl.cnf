@@ -1,0 +1,25 @@
+[ req ]
+default_bits            = 2048
+encrypt_key             = no
+default_md              = sha256
+utf8                    = yes
+string_mask             = utf8only
+prompt                  = no
+distinguished_name = req_distinguished_name
+req_extensions     = req_ext
+
+[ req_distinguished_name ]
+countryName         = RU
+stateOrProvinceName = Bashkir
+localityName        = Ufa
+organizationName    = Miruki
+organizationalUnitName = CORE
+commonName          = miruki.localhost
+
+[ req_ext ]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = miruki.localhost
+DNS.2 = api.miruki.localhost
+DNS.3 = *.miruki.localhost

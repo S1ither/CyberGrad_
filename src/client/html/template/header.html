@@ -1,0 +1,29 @@
+<header class="card card-header position-static">
+  <div class="conatiner row">
+    <h1 class="card-title text-success text-xl-center col-md-3">Киберград</h1>
+    <div
+      id="headerPrimaryContainerUser"
+      class="align-self-center text-end col-md-8"
+    >
+      <button id="bLogin" type="button" class="btn btn-primary">Войти</button>
+      <button
+        id="bProfile"
+        type="button"
+        class="btn btn-light btn-outline-info"
+      >
+        Профиль
+      </button>
+      <button id="bExit" type="button" class="btn btn-danger">Выйти</button>
+    </div>
+  </div>
+  <script src="./js/template/auth.js" defer></script>
+</header>
+<div id="modal" class="modal fade bg-black bg-opacity-50" style="display: none">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div id="modalHeader" class="modal-header"></div>
+      <div id="modalBody" class="modal-body"></div>
+      <div id="modalFooter" class="modal-footer"></div>
+    </div>
+  </div>
+</div>

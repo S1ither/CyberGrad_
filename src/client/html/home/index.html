@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap53/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/index.css"/>
+    <script async src="/js/home/index.js" defer></script>
+    <title>Киберград</title>
+  </head>
+  <body>
+    @file(template/header)
+    <main id="main" class="container h2">
+    </main>
+    @file(template/footer)
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById('myChart');
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],
+          datasets: [{
+            label: 'Emotion: Hard',
+            data: [12, 19, 3, 5, 2, 3,4,6,8,2,1,0,4,3],
+            fill: false,
+            borderColor: 'rgb(255,0,0)',
+            tension: 0.1
+          },{
+            label: 'Emotion: Neutral',
+            data: [12, 19, 3, 5, 2, 3, 5,5,9,5,6,8,],
+            fill: false,
+            borderColor: 'rgb(150,150,150)',
+            tension: 0.1
+          },{
+            label: 'Emotion: Good',
+            data: [12, 19, 3, 5, 2, 3, 8,5,9,3,6,4,5],
+            fill: false,
+            borderColor: 'rgb(0,255,0)',
+            tension: 0.1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

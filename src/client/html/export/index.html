@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/bootstrap53/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <script async src="/js/export/index.js" defer></script>
+    <title>Киберград</title>
+  </head>
+  <body>
+    @file(template/header)
+    <main id="main" class="container h3 p-3">
+      <form action="localhost/api/test" method="post" class="card container">
+        <div class="row">
+          <lable class="text-secondary" for="url">Url</lable>
+          <input
+            class="input-group-text"
+            title="url"
+            id="url"
+            name="url"
+            type="text"
+          />
+        </div>
+        <div class="row">
+          <div class="col">
+            <lable class="text-secondary" for="timeStart">От</lable>
+            <input
+              class="input-group-text p-2"
+              title="timeStart"
+              name="timeStart"
+              id="timeStart"
+              type="time"
+            />
+            <lable class="text-secondary" for="timeEnd">До</lable>
+            <input
+              class="input-group-text p-2"
+              title="timeEnd"
+              name="timeEnd"
+              id="timeEnd"
+              type="time"
+            />
+          </div>
+          <div class="col">
+            <lable class="text-secondary" for="date">Дата</lable>
+            <input
+              class="input-group-text col-2 pt-5 pb-5 w-50"
+              name="date"
+              title="date"
+              id="date"
+              type="date"
+            />
+          </div>
+          <div class="row col">
+            <div>
+              <lable class="text-secondary" for="emotion_1"
+                >Эмоция: Злость</lable
+              >
+              <input
+                class="form-check-input col-2 p-2"
+                title="emotion_1"
+                name="emotion_1"
+                id="emotion_1"
+                type="checkbox"
+              />
+            </div>
+            <div>
+              <lable class="text-secondary" for="emotion_2"
+                >Эмоция: Нейтральная</lable
+              >
+              <input
+                class="form-check-input col-2 p-2"
+                title="emotion_2"
+                name="emotion_2"
+                id="emotion_2"
+                type="checkbox"
+              />
+            </div>
+            <div>
+              <lable class="text-secondary" for="emotion_3"
+                >Эмоция: Радость</lable
+              >
+              <input
+                class="form-check-input col-2 p-2"
+                title="emotion_3"
+                name="emotion_3"
+                id="emotion_3"
+                type="checkbox"
+              />
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success">Отправить</button>
+      </form>
+    </main>
+    @file(template/footer)
+  </body>
+</html>
